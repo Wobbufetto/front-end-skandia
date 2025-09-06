@@ -1,0 +1,14 @@
+<mat-card appareance="outlined" *ngIf="!loading && !error && cards.length === 0">
+  <mat-card-header>
+    <mat-card-title>No hay productos</mat-card-title>
+  </mat-card-header>
+  <mat-card-content>
+    <p>No se encontraron productos para mostrar.</p>
+  </mat-card-content>
+
+</mat-card>
+
+<ng-template #statusTemplate>
+  <div *ngIf="loading">Cargando...</div>
+  <div *ngIf="error">{{ error }}</div>
+</ng-template>
