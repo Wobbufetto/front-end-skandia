@@ -1,0 +1,28 @@
+<h2 class="text-center mt-3">Tus productos</h2>
+
+<div class="row g-3 mt-3" *ngIf="!loading && !error; else statusTemplate">
+  <div class="col-md-4" *ngFor="let card of cards">
+    <mat-card class="product-card">
+      <mat-card-header>
+        <mat-checkbox></mat-checkbox>
+        <mat-card-title>{{ card.nameProduct }}</mat-card-title>
+        <mat-card-subtitle>#{{ card.numberProduct }}</mat-card-subtitle>
+      </mat-card-header>
+      <mat-card-content>
+        <p><strong>Ya cuentas con:</strong></p>
+        <p class="value">{{ card.balanceProduct}}</p>
+        <p>{{ card.detaildProduct }}</p>
+      </mat-card-content>
+      <mat-card-actions>
+        <button mat-stroked-button color="primary" (click)="goToObjective(card)">
+          Ver detalle
+        </button>
+      </mat-card-actions>
+    </mat-card>
+  </div>
+</div>
+
+<ng-template #statusTemplate>
+  <div *ngIf="loading">Cargando...</div>
+  <div *ngIf="error">{{ error }}</div>
+</ng-template>
