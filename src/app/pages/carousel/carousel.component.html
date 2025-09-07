@@ -1,0 +1,42 @@
+<!-- Carrusel de cards -->
+<div class="carousel-container">
+  <div class="carousel-track">
+    <ng-container *ngFor="let card of cards">
+      <mat-card class="carousel-card mat-elevation-z2">
+        <div class="card-checkbox">
+          <mat-checkbox></mat-checkbox>
+        </div>
+        <mat-card-header>
+          <mat-card-title>{{ card.nameProduct }}</mat-card-title>
+          <mat-card-subtitle>#{{ card.numberProduct }}</mat-card-subtitle>
+        </mat-card-header>
+        <mat-card-content>
+          <p><strong>Ya cuentas con:</strong></p>
+          <p class="value">${{ card.balanceProduct }}</p>
+          <p class="small text-muted">{{ card.detaildProduct }}</p>
+        </mat-card-content>
+      </mat-card>
+    </ng-container>
+    <!-- Card final por defecto -->
+    <mat-card class="carousel-card mat-elevation-z2 add-card">
+      <div class="card-checkbox">
+        <mat-checkbox disabled></mat-checkbox>
+      </div>
+      <mat-card-header>
+        <mat-card-title>Agregar producto</mat-card-title>
+        <mat-card-subtitle>Personaliza tu producto</mat-card-subtitle>
+      </mat-card-header>
+      <mat-card-content>
+        <p>
+          Haz clic aquí para agregar un nuevo producto o asociar uno existente.
+        </p>
+      </mat-card-content>
+    </mat-card>
+  </div>
+  <button aria-hidden="true" tabindex="-1" mat-icon-button aria-label="next" class="mat-icon-button mat-mdc-icon-button mat-mdc-button-base docs-carousel-nav docs-carousel-nav-next- mat-unthemed">
+    <span class="mat-mdc-button-persistent-ripple">
+        ::before
+    </span>
+    <mat-icon class="mat-icon notranslate" aria-hidden="true" data-mat-icon-type="font" mat-icon-inline>chevron_right</mat-icon>
+  </button>
+</div>
