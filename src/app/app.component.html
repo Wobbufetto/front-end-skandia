@@ -1,12 +1,23 @@
 <!-- Header -->
-<mat-toolbar color="primary" class="d-flex justify-content-between">
-  <div class="d-flex align-items-center">
-    <img src="assets/logo-skandia.png" alt="Skandia" height="30" class="me-2" />
-    <span>Plan Financiero Digital - FPX</span>
+<mat-toolbar color="primary" class="custom-header d-flex justify-content-between align-items-center">
+  <button mat-icon-button aria-label="Menu">
+    <mat-icon class="menu-icon">menu</mat-icon>
+  </button>
+  <div class="">
+    <img src="skandia-logo2.svg" alt="Skandia" class="logo-skandia" >
+    <p class="plan-text">Plan Financiero Digital - FPX</p>
+  </div>
+  <div class="">
+    <img src="Happy.png" alt="Happy" class="happy">
+    <p><a href="#" class="hipertext">Tu Financial Planner</a></p>
   </div>
   <div>
-    <a mat-button color="accent">Tu Financial Planner</a>
-    <a mat-button color="accent">Aportes</a>
+    <img src="hand3.png" alt="hand3" class="hand3">
+    <p><a href="#" class="aportes">Aportes</a></p>
+  </div>
+  <div class="faq-container">
+    <img src="comp faq.png" alt="faq" class="faq"> 
+    <span class="faq-text">Preguntas frecuentes</span>
   </div>
 </mat-toolbar>
 
