@@ -1,59 +1,49 @@
-# FrontEndSkandia
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.2.5.
+# Skandia Front-End
 
-## Development server
+Aplicación Angular para la gestión de productos financieros y objetivos, con carrusel de productos y diseño responsivo usando Angular Material.
 
-To start a local development server, run:
+## Requisitos
+- Node.js >= Ultima versión
+- Angular CLI >= Ultima versión
 
+## Instalación
+
+Se debe tener instalado el Node.js de anterioridad y el Angular CLI, ya con ellos instalados haremos un 
+npm install para descargar todos los modulos del proyecto
 ```bash
-ng serve
+npm install
 ```
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
-
-## Code scaffolding
-
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+## Ejecución en desarrollo
 
 ```bash
-ng generate component component-name
+ng serve -o
 ```
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+La aplicación estará disponible en `http://localhost:4200`.
+
+## Pruebas unitarias
 
 ```bash
-ng generate --help
+npm test
 ```
 
-## Building
+## Estructura del proyecto
 
-To build the project run:
+- `src/app/pages/` — Vistas principales (home, carousel, etc.)
+- `src/app/services/` — Servicios para consumo de APIs
+- `src/app/layout/` — Header y Footer
+- `src/app/shared-material/` — Módulo de Angular Material compartido
 
-```bash
-ng build
-```
+## Manejo de errores
+- Los servicios usan manejo de errores y muestran mensajes amigables en la UI.
+- Las pruebas unitarias cubren casos de éxito y error.
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
+## Buenas prácticas
+- Código limpio, legible y documentado.
+- Uso de SASS y Angular Material para una UI moderna.
+- Estructura modular y escalable.
 
-## Running unit tests
-
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
-
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+## Contacto
+Para dudas o soporte, contacta a [juanka970129@gmail.com].

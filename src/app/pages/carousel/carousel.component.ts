@@ -18,6 +18,8 @@ export class CarouselComponent implements OnInit {
   loading = true;
   error = '';
 
+  currentIndex = 0;
+
   constructor(private cardsService: CardsService) {}
 
   ngOnInit(): void {
@@ -31,5 +33,26 @@ export class CarouselComponent implements OnInit {
         this.loading = false;
       }
     });
+  }
+
+
+  get isFirstSlide(): boolean {
+    return this.currentIndex === 0;
+  }
+
+  get isLastSlide(): boolean {
+    return this.currentIndex === this.cards.length;
+  }
+
+  nextSlide(): void {
+    if (!this.isLastSlide) {
+      this.currentIndex++;
+    }
+  }
+
+  prevSlide(): void {
+    if (!this.isFirstSlide) {
+      this.currentIndex--;
+    }
   }
 }

@@ -34,3 +34,108 @@
   justify-content: center;
   align-items: center;
 }
+
+@media (max-width: 1400px) {
+  .carousel-track {
+    gap: 12px;
+  }
+  .carousel-card {
+    min-width: 220px;
+    max-width: 240px;
+  }
+}
+
+@media (max-width: 1200px) {
+  .carousel-container {
+    padding: 12px 0;
+  }
+  .carousel-card {
+    min-width: 160px;
+    max-width: 98vw;
+    font-size: 0.95em;
+  }
+  .carousel-track {
+    gap: 8px;
+  }
+}
+.add-card {
+  background: #f5f5f5;
+  border: 2px dashed #00C83C;
+  color: #00C83C;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.carousel-container {
+  position: relative;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 1100px;
+}
+
+.carousel-track {
+  display: flex;
+  transition: transform 0.4s ease-in-out;
+  gap: 20px;
+  width: 100%;
+  overflow: hidden;
+}
+
+.carousel-card {
+  max-width: 352px;
+  max-height: 401px;
+  position: relative;
+  flex: 0 0 auto;
+  box-sizing: border-box;
+
+  &.hover {
+    transform: translateY(-10px);
+    box-shadow: 0 0px 6px #00000029;
+  }
+}
+
+.card-checkbox {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  z-index: 2;
+}
+
+.carousel-btn {
+  background: none;
+  border: none;
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  z-index: 10;
+
+  &.left {
+    left: -50px;
+  }
+
+  &.right {
+    right: -50px;
+  }
+
+  &:disabled {
+    cursor: not-allowed;
+    opacity: 0.5;
+  }
+}
+
+.value {
+  color:#00C83C;
+}
+
+.card-image{
+  max-width: 352px;
+  max-height: 401px;
+
+}
+
+

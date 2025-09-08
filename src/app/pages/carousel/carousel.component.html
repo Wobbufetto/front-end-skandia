@@ -1,5 +1,16 @@
 <!-- Carrusel de cards -->
 <div class="carousel-container">
+  <button 
+    class="carousel-btn left" 
+    (click)="prevSlide()" 
+    [disabled]="isFirstSlide">
+    <img 
+      [src]="isFirstSlide ? 'Group 9764.png' : 'Group 9764-1.png'" 
+      alt="prev" 
+      width="24" 
+      height="24">
+  </button>
+  <!-- Carrusel -->
   <div class="carousel-track">
     <ng-container *ngFor="let card of cards">
       <mat-card class="carousel-card mat-elevation-z2">
@@ -10,15 +21,16 @@
           <mat-card-title>{{ card.nameProduct }}</mat-card-title>
           <mat-card-subtitle>#{{ card.numberProduct }}</mat-card-subtitle>
         </mat-card-header>
+        <mat-divider></mat-divider>
         <mat-card-content>
           <p><strong>Ya cuentas con:</strong></p>
-          <p class="value">${{ card.balanceProduct }}</p>
-          <p class="small text-muted">{{ card.detaildProduct }}</p>
+          <p class="value" >${{ card.balanceProduct }}</p>
+          <p class="small text-muted" >{{ card.detaildProduct }}</p>
         </mat-card-content>
       </mat-card>
     </ng-container>
     <!-- Card final por defecto -->
-    <mat-card class="carousel-card mat-elevation-z2 add-card">
+    <mat-card class="carousel-card mat-elevation-z2 add-card" >
       <div class="card-checkbox">
         <mat-checkbox disabled></mat-checkbox>
       </div>
@@ -26,6 +38,7 @@
         <mat-card-title>Agregar producto</mat-card-title>
         <mat-card-subtitle>Personaliza tu producto</mat-card-subtitle>
       </mat-card-header>
+      <img mat-card-image src="Group 12973.png" alt="plus" height="401px" class="card-image">
       <mat-card-content>
         <p>
           Haz clic aquí para agregar un nuevo producto o asociar uno existente.
@@ -33,10 +46,16 @@
       </mat-card-content>
     </mat-card>
   </div>
-  <button aria-hidden="true" tabindex="-1" mat-icon-button aria-label="next" class="mat-icon-button mat-mdc-icon-button mat-mdc-button-base docs-carousel-nav docs-carousel-nav-next- mat-unthemed">
-    <span class="mat-mdc-button-persistent-ripple">
-        ::before
-    </span>
-    <mat-icon class="mat-icon notranslate" aria-hidden="true" data-mat-icon-type="font" mat-icon-inline>chevron_right</mat-icon>
+
+  <button 
+    class="carousel-btn right" 
+    (click)="nextSlide()" 
+    [disabled]="isLastSlide">
+    <img 
+      [src]="isLastSlide ? 'Group 9764.png' : 'Group 9764-1.png'" 
+      alt="next" 
+      width="24" 
+      height="24">
   </button>
 </div>
+

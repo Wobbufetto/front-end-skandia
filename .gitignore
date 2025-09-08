@@ -37,6 +37,22 @@ yarn-error.log
 testem.log
 /typings
 
+# Environment files
+.env
+.env.*
+
+# Logs
+*.log
+logs/
+
+# OS generated files
+ehthumbs.db
+Icon?
+Desktop.ini
+*.swp
+*.swo
+*.tmp
+
 # System files
 .DS_Store
 Thumbs.db

@@ -1,0 +1,93 @@
+// Responsividad adicional para el footer
+@media (max-width: 600px) {
+	.footer-skandia {
+		padding: 1rem 0 0.5rem 0;
+		font-size: 0.95rem;
+	}
+	.footer-content {
+		flex-direction: column;
+		gap: 1rem;
+		padding: 0 0.5rem;
+	}
+	.footer-left, .footer-center, .footer-right {
+		min-width: 0;
+		max-width: 100%;
+		width: 100%;
+		margin-bottom: 0.5rem;
+	}
+	.footer-right {
+		justify-content: flex-start;
+		gap: 12px;
+	}
+}
+
+.footer-skandia {
+	background: #fff;
+	padding: 2rem 0 1.5rem 0;
+	font-size: 0.7rem;
+	color: #222;
+	border-top: 1px solid #e0e0e0;
+}
+
+.footer-content {
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-start;
+	max-width: 1200px;
+	margin: 0 auto;
+	flex-wrap: wrap;
+	gap: 2rem;
+}
+
+.footer-left {
+	min-width: 260px;
+	max-width: 320px;
+}
+
+.footer-green {
+	color: #00C83C;
+	font-weight: bold;
+}
+
+.footer-center {
+	min-width: 220px;
+	max-width: 350px;
+	line-height: 1;
+}
+.footer-center a {
+	color: #222;
+	text-decoration: underline;
+	font-size: 0.7rem;
+	display: block;
+	margin-bottom: 2px;
+	transition: color 0.2s;
+}
+.footer-center a:hover {
+	color: #00C83C;
+}
+
+.footer-right {
+	display: flex;
+	gap: 18px;
+	align-items: end;
+    align-self: self-end;
+	min-width: 100px;
+}
+.footer-right a img {
+	filter: grayscale(1) brightness(0.5);
+	transition: filter 0.2s;
+}
+.footer-right a:hover img {
+	filter: none;
+}
+
+@media (max-width: 900px) {
+	.footer-content {
+		flex-direction: column;
+		align-items: flex-start;
+		gap: 1.5rem;
+	}
+	.footer-right {
+		margin-top: 1rem;
+	}
+}

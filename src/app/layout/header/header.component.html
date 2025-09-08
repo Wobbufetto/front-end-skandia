@@ -1,6 +1,6 @@
 <!-- Header -->
-<mat-toolbar color="primary" class="custom-header d-flex justify-content-between align-items-center">
-  <button mat-icon-button aria-label="Menu">
+<mat-toolbar color="primary" class="custom-header d-flex justify-content-between align-items-center mat-elevation-z3">
+  <button mat-icon-button (click)="collapsed.set(!collapsed())">
     <mat-icon class="menu-icon">menu</mat-icon>
   </button>
   <div class="">
@@ -20,3 +20,35 @@
     <span class="faq-text">Preguntas frecuentes</span>
   </div>
 </mat-toolbar>
+<mat-sidenav-container class="sidenav-container">
+  <mat-sidenav opened mode="side" [style.width]="sidenavWidth()"></mat-sidenav>
+  <mat-sidenav-content class="content-sidenav">
+    <mat-nav-list>
+      <a mat-list-item href="#">
+        <img src="home.png" alt="home" class="home">
+        Inicio
+      </a>
+      <a mat-list-item href="#">
+        <img src="hoja1.png" alt="hoja" class="hoja">
+        Contratos
+      </a>
+      <a mat-list-item href="#">
+        <img src="Tool.png" alt="tool" class="tool">
+        Acciones
+      </a>
+      <a mat-list-item href="#">
+        <img src="star.png" alt="star" class="star">
+        Objetivos
+      </a>
+      <a mat-list-item href="#">
+        <img src="money.png" alt="money" class="money">
+        Herramientas
+      </a>
+      <a mat-list-item href="#">
+        <img src="talk2.png" alt="talk" class="talk">
+        Servicio al cliente
+      </a>
+    </mat-nav-list>
+
+  </mat-sidenav-content>
+</mat-sidenav-container>
