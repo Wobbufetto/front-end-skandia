@@ -17,5 +17,5 @@ export class HeaderComponent {
 
   collapsed = signal(false);
 
-  sidenavWidth = computed(() => this.collapsed() ? '200px' : '10px');
+  sidenavWidth = computed(() => this.collapsed() ? '40px' : '220px');
 }

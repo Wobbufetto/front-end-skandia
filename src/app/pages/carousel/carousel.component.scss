@@ -1,9 +1,6 @@
-.carousel-container {
-  width: 100%;
-  overflow-x: auto;
-  padding: 24px 0;
+.rotate-180 {
+  transform: rotate(180deg);
 }
-
 .carousel-track {
   display: flex;
   gap: 24px;
@@ -74,7 +71,6 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 1100px;
 }
 
 .carousel-track {

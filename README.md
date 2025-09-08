@@ -1,16 +1,15 @@
 
 # Skandia Front-End
 
-Aplicación Angular para la gestión de productos financieros y objetivos, con carrusel de productos y diseño responsivo usando Angular Material.
+Aplicación Angular para la gestión de productos financieros y objetivos, con carrusel de productos y diseño responsivo usando Angular Material y Bootstrap.
 
 ## Requisitos
-- Node.js >= Ultima versión
-- Angular CLI >= Ultima versión
+- Node.js >= 22
+- Angular CLI >= 11 
 
 ## Instalación
 
-Se debe tener instalado el Node.js de anterioridad y el Angular CLI, ya con ellos instalados haremos un 
-npm install para descargar todos los modulos del proyecto
+Se debe tener instalado el Node.js de anterioridad y el Angular CLI, ya con ellos instalados haremos un npm install para descargar todos los modulos del proyecto
 ```bash
 npm install
 ```
@@ -26,19 +25,16 @@ La aplicación estará disponible en `http://localhost:4200`.
 ## Pruebas unitarias
 
 ```bash
-npm test
+ng test
 ```
 
 ## Estructura del proyecto
 
-- `src/app/pages/` — Vistas principales (home, carousel, etc.)
+- `public/` — Repositorio de imagenes e iconos
+- `src/app/layout/` — Componentes del Header y Footer
+- `src/app/pages/` — Vistas principales y componentes principales (home, carousel, etc.)
 - `src/app/services/` — Servicios para consumo de APIs
-- `src/app/layout/` — Header y Footer
 - `src/app/shared-material/` — Módulo de Angular Material compartido
-
-## Manejo de errores
-- Los servicios usan manejo de errores y muestran mensajes amigables en la UI.
-- Las pruebas unitarias cubren casos de éxito y error.
 
 ## Buenas prácticas
 - Código limpio, legible y documentado.

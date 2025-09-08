@@ -1,3 +1,11 @@
+:host {
+  display: block;
+  min-height: 100vh;
+  background-image: url('/public/Group 3329.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
 
 .rev-obj{
     position: relative;
@@ -14,4 +22,3 @@
   font-weight: bold;
   font-size: 1.2em;
 }
-

@@ -3,15 +3,16 @@
   <button mat-icon-button (click)="collapsed.set(!collapsed())">
     <mat-icon class="menu-icon">menu</mat-icon>
   </button>
-  <div class="">
+  <div class="header-logo-text">
     <img src="skandia-logo2.svg" alt="Skandia" class="logo-skandia" >
     <p class="plan-text">Plan Financiero Digital - FPX</p>
   </div>
-  <div class="">
+
+  <div class="header-logo-text">
     <img src="Happy.png" alt="Happy" class="happy">
     <p><a href="#" class="hipertext">Tu Financial Planner</a></p>
   </div>
-  <div>
+  <div class="header-logo-text">
     <img src="hand3.png" alt="hand3" class="hand3">
     <p><a href="#" class="aportes">Aportes</a></p>
   </div>
@@ -21,10 +22,10 @@
   </div>
 </mat-toolbar>
 <mat-sidenav-container class="sidenav-container">
-  <mat-sidenav opened mode="side" [style.width]="sidenavWidth()"></mat-sidenav>
-  <mat-sidenav-content class="content-sidenav">
+  <mat-sidenav mode="side" [style.width]="sidenavWidth()"></mat-sidenav>
+  <mat-sidenav-content class="content-sidenav" [style.margin-right]="sidenavWidth()">
     <mat-nav-list>
-      <a mat-list-item href="#">
+      <a mat-list-item href="#" class="escogido">
         <img src="home.png" alt="home" class="home">
         Inicio
       </a>
